@@ -18,7 +18,7 @@ class WebsiteLayout extends StatelessWidget {
               Column(
                 children: [
                   Text(
-                    'Hello My Name is',
+                    'Hello, My Name is',
                     style: TextStyle(
                       color: Color.fromARGB(255, 225, 50, 59),
                       fontSize: 20,
