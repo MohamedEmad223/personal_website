@@ -11,8 +11,9 @@ class PersonalWebsite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      onGenerateRoute: appRouter.generateRoute,
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.mainPage,
+      initialRoute: Routes.web,
     );
   }
 }
