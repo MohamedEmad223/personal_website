@@ -6,7 +6,7 @@ import '../../ui/main_page.dart';
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
     //this arguments to be passed in any screen like this ( arguments as ClassName )
-    final args = settings.arguments;
+    //final args = settings.arguments;
     switch (settings.name) {
       case Routes.mainPage:
         return MaterialPageRoute(
