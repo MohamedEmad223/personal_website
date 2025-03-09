@@ -51,8 +51,8 @@ class HomeSections extends StatelessWidget {
               children: [
                 Image.asset(
                   'assets/images/photo_2024-08-04_05-04-58.jpg',
-                  width: 500,
-                  height: 450,
+                  width: 500.w,
+                  height: 450.h,
                 ),
               ],
             ),
