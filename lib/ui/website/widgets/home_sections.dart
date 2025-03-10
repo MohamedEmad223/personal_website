@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:personal_website/ui/website/widgets/custom_button.dart';
 
 import '../../../core/theming/app_text_style.dart' show AppTextStyle;
 import '../../../core/theming/colors.dart' show ColorsApp;
@@ -34,16 +35,7 @@ class HomeSections extends StatelessWidget {
                   style: AppTextStyle.poppins15W500secondary,
                 ),
                 SizedBox(height: 80.h),
-                MaterialButton(
-                  onPressed: () {},
-                  color: ColorsApp.primaryVariant,
-                  child: Text(
-                    'Contact Now',
-                    style: AppTextStyle.poppins35W500white.copyWith(
-                      fontSize: 15.sp,
-                    ),
-                  ),
-                ),
+                CustomButton(text: 'Contact Me', onPressed: () {}),
               ],
             ),
             Spacer(),
