@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:personal_website/core/theming/app_text_style.dart';
 import 'package:personal_website/core/theming/colors.dart';
 import 'package:personal_website/ui/website/widgets/home_sections.dart';
+import 'package:personal_website/ui/website/widgets/row_icon_widget.dart';
 
 import 'widgets/app_bar_widgets.dart';
 
@@ -75,8 +76,10 @@ class WebsiteLayout extends StatelessWidget {
                             children: [
                               Row(
                                 children: [
-                                  Image.asset(
-                                    'assets/images/dart-packages-dart-programming-language-logo-metropolis-building-crystal-architecture-transparent-png-2824279.png',
+                                  RowIconWidget(
+                                    path:
+                                        'assets/images/dart-packages-dart-programming-language-logo-metropolis-building-crystal-architecture-transparent-png-2824279-removebg-preview.png',
+                                    text: 'Dart',
                                   ),
                                 ],
                               ),
