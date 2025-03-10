@@ -8,7 +8,7 @@ import 'package:personal_website/ui/website/widgets/row_icon_widget.dart';
 import 'widgets/app_bar_widgets.dart';
 
 class WebsiteLayout extends StatelessWidget {
-  const WebsiteLayout({Key? key});
+  const WebsiteLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +23,8 @@ class WebsiteLayout extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 100.w, vertical: 100.h),
               color: ColorsApp.secondaryVariant,
               child: Row(
-                crossAxisAlignment:
-                    CrossAxisAlignment.start, // Align children at the top
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Left Column with Image
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -68,22 +66,45 @@ class WebsiteLayout extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 40.h),
-                        Container(
-                          color: Colors.red,
-                          width: 600.w,
-                          height: 200.h,
-                          child: Column(
-                            children: [
-                              Row(
-                                children: [
-                                  RowIconWidget(
-                                    path:
-                                        'assets/images/dart-packages-dart-programming-language-logo-metropolis-building-crystal-architecture-transparent-png-2824279-removebg-preview.png',
-                                    text: 'Dart',
-                                  ),
-                                ],
-                              ),
-                            ],
+                        Padding(
+                          padding: EdgeInsets.only(left: 32.h),
+                          child: Container(
+                            width: 500.w,
+                            height: 100.h,
+                            decoration: BoxDecoration(
+                              color: ColorsApp.primary,
+                              borderRadius: BorderRadius.circular(10.r),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                RowIconWidget(
+                                  path:
+                                      'assets/images/dart-packages-dart-programming-language-logo-metropolis-building-crystal-architecture-transparent-png-2824279-removebg-preview.png',
+                                  text: 'Dart',
+                                ),
+                                RowIconWidget(
+                                  path:
+                                      'assets/images/OIP-removebg-preview.png',
+                                  text: 'Flutter',
+                                ),
+                                RowIconWidget(
+                                  path:
+                                      'assets/images/logo-logomark-removebg-preview (1).png',
+                                  text: 'Firebase',
+                                ),
+                                RowIconWidget(
+                                  path:
+                                      'assets/images/OIP__1_-removebg-preview (1).png',
+                                  text: 'Google Maps',
+                                ),
+                                RowIconWidget(
+                                  path:
+                                      'assets/images/OIP-removebg-preview (1).png',
+                                  text: 'git',
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
