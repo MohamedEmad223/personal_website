@@ -15,7 +15,7 @@ class AboutMeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      key: sectionKey, // Attach the key here
+      key: sectionKey, 
       padding: EdgeInsets.symmetric(horizontal: 100.w, vertical: 100.h),
       color: ColorsApp.secondaryVariant,
       child: Row(
