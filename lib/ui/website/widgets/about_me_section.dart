@@ -7,29 +7,40 @@ import 'package:personal_website/ui/website/widgets/custom_button.dart'
 import '../../../core/theming/colors.dart';
 import 'row_icon_widget.dart';
 
-class AboutMeWidgets extends StatelessWidget {
-  const AboutMeWidgets({super.key});
+class AboutMeSection extends StatelessWidget {
+  final GlobalKey? sectionKey;
+
+  const AboutMeSection({super.key, this.sectionKey});
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: sectionKey, // Attach the key here
       padding: EdgeInsets.symmetric(horizontal: 100.w, vertical: 100.h),
       color: ColorsApp.secondaryVariant,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 30.h),
-              Image.asset(
-                'assets/images/449758303_452984650961087_2574033398265103770_n.jpg',
-                width: 500.w,
-                height: 450.h,
-              ),
-            ],
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 30.h),
+                Container(
+                  width: 300.w,
+                  height: 450.h,
+                  decoration: BoxDecoration(
+                    color: ColorsApp.primaryVariant,
+                    borderRadius: BorderRadius.circular(10.r),
+                  ),
+                  child: Image.asset(
+                    'assets/images/449758303_452984650961087_2574033398265103770_n.jpg',
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ],
+            ),
           ),
-
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,7 +50,6 @@ class AboutMeWidgets extends StatelessWidget {
                     Image.asset(
                       'assets/images/arrow_right_20dp_EA3323_FILL0_wght400_GRAD0_opsz20.png',
                     ),
-
                     Text(
                       'About Me',
                       style: AppTextStyle.poppins35W500white.copyWith(
@@ -49,11 +59,10 @@ class AboutMeWidgets extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 20.h),
-
                 Padding(
                   padding: EdgeInsets.only(left: 32.h),
                   child: Text(
-                    ' i am Mohamed Emad, a junior flutter developer from Egypt,\n has been graduated from faculty of Computer science (Cs department),\n Mansoura University, i have been working in the field for 2 years,\n i have a good experience in flutter, dart, firebase, and i am looking forward to work\n in a good company to improve my skills and gain more experience.',
+                    'I am Mohamed Emad, a junior Flutter developer from Egypt.\nGraduated from Faculty of Computer Science (CS department), Mansoura University.\nI have been working in the field for 2 years.\nI have good experience in Flutter, Dart, Firebase, and I am looking forward to working in a good company to improve my skills and gain more experience.',
                     style: AppTextStyle.poppins15W500secondary.copyWith(
                       fontWeight: FontWeight.w400,
                     ),
@@ -93,7 +102,7 @@ class AboutMeWidgets extends StatelessWidget {
                         ),
                         RowIconWidget(
                           path: 'assets/images/OIP-removebg-preview (1).png',
-                          text: 'git',
+                          text: 'Git',
                         ),
                       ],
                     ),

@@ -6,11 +6,14 @@ import '../../../core/theming/app_text_style.dart' show AppTextStyle;
 import '../../../core/theming/colors.dart' show ColorsApp;
 
 class HomeSections extends StatelessWidget {
-  const HomeSections({super.key});
+  const HomeSections({super.key, this.sectionKey});
+
+  final GlobalKey? sectionKey;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: sectionKey,
       padding: EdgeInsets.symmetric(horizontal: 100.w, vertical: 100.h),
       color: ColorsApp.primary,
       child: Center(
