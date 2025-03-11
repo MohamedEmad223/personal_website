@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:personal_website/core/theming/app_text_style.dart';
-import 'package:personal_website/core/theming/colors.dart';
 
 import 'package:personal_website/ui/website/widgets/about_me_section.dart';
 import 'package:personal_website/ui/website/widgets/contact_section.dart';
@@ -15,14 +12,14 @@ class WebsiteLayout extends StatelessWidget {
   final GlobalKey aboutMeKey = GlobalKey();
   final GlobalKey homeKey = GlobalKey();
   final GlobalKey servicesKey = GlobalKey();
-
-  
+  final GlobalKey contactKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBarWidgets(
+        contactkey: contactKey,
         servicesKey: servicesKey,
         scrollController: scrollController,
         homeKey: homeKey,
@@ -34,7 +31,7 @@ class WebsiteLayout extends StatelessWidget {
             HomeSections(sectionKey: homeKey),
             AboutMeSection(sectionKey: aboutMeKey),
             ServicesSection(sectionKey: servicesKey),
-            ContactSection()
+            ContactSection(sectionKey: contactKey),
           ],
         ),
       ),

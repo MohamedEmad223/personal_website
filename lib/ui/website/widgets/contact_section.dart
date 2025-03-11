@@ -4,11 +4,13 @@ import 'package:personal_website/core/theming/app_text_style.dart';
 import 'package:personal_website/core/theming/colors.dart';
 
 class ContactSection extends StatelessWidget {
-  const ContactSection({super.key});
+  const ContactSection({super.key, this.sectionKey});
+  final GlobalKey? sectionKey;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: sectionKey,
       width: double.infinity,
       color: ColorsApp.primaryVariant2,
       child: Center(
