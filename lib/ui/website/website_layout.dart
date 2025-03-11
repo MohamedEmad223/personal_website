@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:personal_website/ui/website/widgets/about_me_section.dart';
 import 'package:personal_website/ui/website/widgets/home_sections.dart';
+import 'package:personal_website/ui/website/widgets/what_can_i_do_sction.dart';
 
 import 'widgets/app_bar_widgets.dart';
 
@@ -24,6 +25,7 @@ class WebsiteLayout extends StatelessWidget {
           children: [
             HomeSections(sectionKey: homeKey),
             AboutMeSection(sectionKey: aboutMeKey),
+            WhatCanIDoSction(),
           ],
         ),
       ),
