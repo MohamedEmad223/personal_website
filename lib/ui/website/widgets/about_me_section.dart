@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:personal_website/core/theming/app_text_style.dart';
 import 'package:personal_website/ui/website/widgets/custom_button.dart'
     show CustomButton;
+import 'package:personal_website/ui/website/widgets/red_arrow_widgets.dart';
 
 import '../../../core/theming/colors.dart';
 import 'row_icon_widget.dart';
@@ -45,19 +46,7 @@ class AboutMeSection extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    Image.asset(
-                      'assets/images/arrow_right_20dp_EA3323_FILL0_wght400_GRAD0_opsz20.png',
-                    ),
-                    Text(
-                      'About Me',
-                      style: AppTextStyle.poppins35W500white.copyWith(
-                        fontSize: 15.sp,
-                      ),
-                    ),
-                  ],
-                ),
+                RedArrowWidgets(text: 'About Me'),
                 SizedBox(height: 20.h),
                 Padding(
                   padding: EdgeInsets.only(left: 32.h),

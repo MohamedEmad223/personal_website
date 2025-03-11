@@ -25,7 +25,7 @@ class WebsiteLayout extends StatelessWidget {
           children: [
             HomeSections(sectionKey: homeKey),
             AboutMeSection(sectionKey: aboutMeKey),
-            WhatCanIDoSction(),
+            ServicesSction(),
           ],
         ),
       ),
