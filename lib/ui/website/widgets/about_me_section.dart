@@ -22,6 +22,8 @@ class AboutMeSection extends StatelessWidget {
           ..click();
   }
 
+  
+
   @override
   Widget build(BuildContext context) {
     return Container(
