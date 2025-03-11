@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:personal_website/core/theming/app_text_style.dart';
 import 'package:personal_website/ui/website/widgets/custom_button.dart'
     show CustomButton;
+import 'package:universal_html/html.dart' as html;
 
 import '../../../core/theming/colors.dart';
 import 'row_icon_widget.dart';
@@ -12,10 +13,19 @@ class AboutMeSection extends StatelessWidget {
 
   const AboutMeSection({super.key, this.sectionKey});
 
+  void downloadPdf() {
+    final pdfUrl =
+        'https://drive.google.com/file/d/1T-yZ5rhxaUwiDkDr7huOpt150Zde9LgB/view?usp=sharing';
+    final anchor =
+        html.AnchorElement(href: pdfUrl)
+          ..setAttribute('download', 'Mohamed-Emad-Resume (1).pdf')
+          ..click();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      key: sectionKey, 
+      key: sectionKey,
       padding: EdgeInsets.symmetric(horizontal: 100.w, vertical: 100.h),
       color: ColorsApp.secondaryVariant,
       child: Row(
@@ -111,7 +121,12 @@ class AboutMeSection extends StatelessWidget {
                 SizedBox(height: 60.h),
                 Padding(
                   padding: EdgeInsets.only(left: 32.h),
-                  child: CustomButton(onPressed: () {}, text: 'Download CV'),
+                  child: CustomButton(
+                    onPressed: () {
+                      downloadPdf();
+                    },
+                    text: 'Download CV',
+                  ),
                 ),
               ],
             ),

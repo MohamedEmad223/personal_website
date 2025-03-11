@@ -5,12 +5,14 @@ class AppBarWidgets extends StatelessWidget implements PreferredSizeWidget {
   final ScrollController scrollController;
   final GlobalKey aboutMeKey;
   final GlobalKey homeKey;
+  final GlobalKey servicesKey;
 
   const AppBarWidgets({
     super.key,
     required this.scrollController,
     required this.aboutMeKey,
     required this.homeKey,
+    required this.servicesKey,
   });
 
   void scrollToSection(GlobalKey key) {
@@ -44,13 +46,14 @@ class AppBarWidgets extends StatelessWidget implements PreferredSizeWidget {
               ), // Home (Can add scrolling logic for home later)
           child: Text('Home', style: TextStyle(color: Colors.white)),
         ),
-        TextButton(
-          onPressed: () {}, // Resume (Optional)
-          child: Text('Resume', style: TextStyle(color: Colors.white)),
-        ),
+
         TextButton(
           onPressed: () => scrollToSection(aboutMeKey), // Scroll to About Me
           child: Text('About Me', style: TextStyle(color: Colors.white)),
+        ),
+        TextButton(
+          onPressed: () => scrollToSection(servicesKey), // Resume (Optional)
+          child: Text('Services', style: TextStyle(color: Colors.white)),
         ),
         TextButton(
           onPressed: () {}, // Contact (Optional)
