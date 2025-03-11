@@ -12,7 +12,7 @@ class AppRouter {
       case Routes.mainPage:
         return MaterialPageRoute(builder: (_) => const MainPage());
       case Routes.web:
-        return MaterialPageRoute(builder: (_) => const WebsiteLayout());
+        return MaterialPageRoute(builder: (_) => WebsiteLayout());
       default:
         return null;
     }
