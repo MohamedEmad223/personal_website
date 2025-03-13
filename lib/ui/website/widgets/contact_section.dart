@@ -28,7 +28,7 @@ class ContactSection extends StatelessWidget {
                   fontSize: 15.sp,
                   decoration: TextDecoration.underline,
                   color:
-                      ColorsApp.primaryVariant, // Change to a clickable color
+                      ColorsApp.primaryVariant, 
                 ),
               ),
             ),
