@@ -13,27 +13,24 @@ class ContactSection extends StatelessWidget {
       key: sectionKey,
       width: double.infinity,
       color: ColorsApp.primaryVariant2,
-      child: Center(
-        child: Column(
-          children: [
-            Text(
-              'All copy rights reserved',
-              style: AppTextStyle.poppins35W500white.copyWith(fontSize: 15.sp),
-            ),
-            GestureDetector(
-              onTap: () {},
-              child: Text(
-                'by Mohamed Emad',
-                style: AppTextStyle.poppins35W500white.copyWith(
-                  fontSize: 15.sp,
-                  decoration: TextDecoration.underline,
-                  color:
-                      ColorsApp.primaryVariant, 
-                ),
+      child: Column(
+        children: [
+          Text(
+            'All copy rights reserved',
+            style: AppTextStyle.poppins35W500white.copyWith(fontSize: 15.sp),
+          ),
+          GestureDetector(
+            onTap: () {},
+            child: Text(
+              'by Mohamed Emad',
+              style: AppTextStyle.poppins35W500white.copyWith(
+                fontSize: 15.sp,
+                decoration: TextDecoration.underline,
+                color: ColorsApp.primaryVariant,
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
